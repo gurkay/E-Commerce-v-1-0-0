@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class Categories extends StatefulWidget{
-  @override 
+class Categories extends StatefulWidget {
+  @override
   _CategoriesState createState() => _CategoriesState();
 }
 
@@ -16,17 +16,17 @@ class _CategoriesState extends State<Categories> {
   ];
   int selectedIndex = 0;
 
-  Widget buildCategory(int index){
+  Widget buildCategory(int index) {
     return GestureDetector(
       onTap: () {
-        setState((){
+        setState(() {
           selectedIndex = index;
         });
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Column(
-          crossAXisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               categories[index],
@@ -39,7 +39,7 @@ class _CategoriesState extends State<Categories> {
               margin: EdgeInsets.only(top: kDefaultPadding / 4),
               height: 2,
               width: 30,
-              color: selectedIndex = index ? Colors.black: Colors.transparent,
+              color: selectedIndex == index ? Colors.black : Colors.transparent,
             ),
           ],
         ),
@@ -48,7 +48,7 @@ class _CategoriesState extends State<Categories> {
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: SizedBox(

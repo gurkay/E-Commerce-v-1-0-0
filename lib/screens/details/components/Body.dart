@@ -3,13 +3,19 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../models/Product.dart';
 
-class Body extends StatelessWidget{
+import 'ColorAndSize.dart';
+import 'Description.dart';
+import 'CounterWithFavBtn.dart';
+import 'AddToCart.dart';
+import 'ProductTitleWithImage.dart';
+
+class Body extends StatelessWidget {
   final Product product;
 
-  const Body({Key key, this.product}):super(key:key);
+  const Body({Key key, this.product}) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
@@ -36,7 +42,7 @@ class Body extends StatelessWidget{
                   child: Column(
                     children: <Widget>[
                       ColorAndSize(product: product),
-                      SizedBox(height: kDefaultpadding / 2),
+                      SizedBox(height: kDefaultPadding / 2),
                       Description(product: product),
                       SizedBox(height: kDefaultPadding / 2),
                       CounterWithFavBtn(),

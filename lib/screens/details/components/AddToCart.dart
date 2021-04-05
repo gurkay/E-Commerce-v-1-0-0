@@ -4,19 +4,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../models/Product.dart';
 import '../../../constants.dart';
 
-class AddToCart extends StatelessWidget{
-
+class AddToCart extends StatelessWidget {
   final Product product;
 
   const AddToCart({
     Key key,
     @required this.product,
-  }):super(key: key);
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Padding(
-      paddint: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: Row(
         children: <Widget>[
           Container(
@@ -40,11 +39,11 @@ class AddToCart extends StatelessWidget{
           Expanded(
             child: SizedBox(
               height: 50,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                color: product.color,
+              child: TextButton(
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(18),
+                // ),
+                // color: product.color,
                 onPressed: () {},
                 child: Text(
                   'Buy Now'.toUpperCase(),

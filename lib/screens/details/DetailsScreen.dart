@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
 import '../../../models/Product.dart';
-import '../../../screens/details/components/body.dart';
+import 'components/Body.dart';
 
-class DetailsScreen extends StatelessWidget{
+class DetailsScreen extends StatelessWidget {
   final Product product;
 
-  AppBar buildAppBar(BuildContext context){
+  AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: product.color,
       elevation: 0,
@@ -21,21 +21,21 @@ class DetailsScreen extends StatelessWidget{
       ),
       actions: <Widget>[
         IconButton(
-          icon:  SvgPicture.asset('assets/icons/search.svg'),
+          icon: SvgPicture.asset('assets/icons/search.svg'),
           onPressed: () {},
         ),
         IconButton(
           icon: SvgPicture.asset('assets/icons/cart.svg'),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPadding/2),
-      ];
+        SizedBox(width: kDefaultPadding / 2),
+      ],
     );
   }
 
-  const DetailsScreen({Key key, this.product}): super(key: key);
+  const DetailsScreen({Key key, this.product}) : super(key: key);
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: product.color,
       appBar: buildAppBar(context),

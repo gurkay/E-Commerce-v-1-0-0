@@ -4,16 +4,15 @@ import '../../../models/Product.dart';
 import '../../../constants.dart';
 
 class ProductTitleWithImage extends StatelessWidget {
-
   final Product product;
 
   const ProductTitleWithImage({
     Key key,
     @required this.product,
-  }):super(key: key);
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Column(
@@ -21,17 +20,14 @@ class ProductTitleWithImage extends StatelessWidget {
         children: <Widget>[
           Text(
             'Aristocratic Hang Bag',
-            style: TextStyleJ(color: Colors.white),
+            style: TextStyle(color: Colors.white),
           ),
           Text(
             product.title,
-            style: Theme.of(context)
-              .textTheme
-              .headline4
-              .copyWith(
-                color: Colors.white, 
-                fontWeight: FontWeight.bold,
-            ),
+            style: Theme.of(context).textTheme.headline4.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
           SizedBox(height: kDefaultPadding),
           Row(
@@ -43,14 +39,12 @@ class ProductTitleWithImage extends StatelessWidget {
                     TextSpan(
                       text: '\$${product.price}',
                       style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold
-                      ),
+                          color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
               ),
-              SizedBox(width: kDefaultpadding),
+              SizedBox(width: kDefaultPadding),
               Expanded(
                 child: Hero(
                   tag: '${product.id}',

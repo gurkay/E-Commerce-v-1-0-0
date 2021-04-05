@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../models/Product.dart';
 
-class ColorAndSize extends StatelessWidget{
+class ColorAndSize extends StatelessWidget {
   final Product product;
 
   const ColorAndSize({
     Key key,
     @required this.product,
-  }):super(key: key);
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
         Expanded(
@@ -21,7 +21,7 @@ class ColorAndSize extends StatelessWidget{
             children: <Widget>[
               Text('Color'),
               Row(
-                children: <Widgey>[
+                children: [
                   ColorDot(
                     color: Color(0xFF356C95),
                     isSelected: true,
@@ -42,9 +42,9 @@ class ColorAndSize extends StatelessWidget{
                 TextSpan(
                   text: '${product.size} cm',
                   style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(fontWeight: FontWeight.bold),
+                      .textTheme
+                      .headline5
+                      .copyWith(fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -55,7 +55,7 @@ class ColorAndSize extends StatelessWidget{
   }
 }
 
-class ColorDot extends StatelessWidget{
+class ColorDot extends StatelessWidget {
   final Color color;
   final bool isSelected;
 
@@ -63,7 +63,7 @@ class ColorDot extends StatelessWidget{
     Key key,
     this.color,
     this.isSelected = false,
-  }):super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,6 @@ class ColorDot extends StatelessWidget{
       margin: EdgeInsets.only(
         top: kDefaultPadding / 4,
         right: kDefaultPadding / 2,
-
       ),
       padding: EdgeInsets.all(2.5),
       height: 24,

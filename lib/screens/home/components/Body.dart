@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import '../../models/Product.dart';
-import '../../screens/details/DetailsScreen.dart';
+import '../../../constants.dart';
+import '../../../models/Product.dart';
+import '../../../screens/details/DetailsScreen.dart';
 
 import './Categories.dart';
 import './ItemCard.dart';
 
-class Body extends StatelessWidget{
+class Body extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -18,9 +18,9 @@ class Body extends StatelessWidget{
           child: Text(
             'Women',
             style: Theme.of(context)
-              .textTheme
-              .headline5
-              .copyWith(fontWeight: FontWeight.bold),
+                .textTheme
+                .headline5
+                .copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         Categories(),
@@ -28,7 +28,7 @@ class Body extends StatelessWidget{
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: GridView.builder(
-              itemCount: products.leading,
+              itemCount: products.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: kDefaultPadding,

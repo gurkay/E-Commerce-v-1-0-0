@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Product{
+class Product {
   final String image, title, description;
   final int price, size, id;
   final Color color;
@@ -18,7 +18,7 @@ class Product{
 
 String dummyText = 'Simple Dummy Text DATA';
 
-List<Product> product = [
+List<Product> products = [
   Product(
     id: 1,
     title: 'Office Code',
@@ -68,7 +68,7 @@ List<Product> product = [
     id: 6,
     title: 'Wallet',
     price: 222,
-    size:12,
+    size: 12,
     description: dummyText,
     image: 'assets/images/bag_6.png',
     color: Color(0xFFAEAEAE),
